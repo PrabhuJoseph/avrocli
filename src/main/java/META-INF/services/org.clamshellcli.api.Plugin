@@ -1,0 +1,9 @@
+avrocli.cli.DescribeCommand
+avrocli.cli.BulkCommand
+avrocli.cli.SelectCommand
+avrocli.cli.AvroPrompt
+avrocli.cli.AvroSplashScreen
+avrocli.cli.HelpCommand
+org.clamshellcli.impl.CmdController
+org.clamshellcli.impl.commands.ExitCmd
+avrocli.cli.HadoopList

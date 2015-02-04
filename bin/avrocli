@@ -1,0 +1,18 @@
+#!/bin/bash
+
+##########################################################################
+#
+# avrocli:  AVRO Viewer Tool.
+#
+##########################################################################
+user=`whoami`
+
+JAVA_COMMAND="-Dlogback.configurationFile=/opt/crs/etc/DummyLogback.xml -Dcli.config.file=/opt/crs/tools/etc/cli.config -cp /opt/CrsCli/plugins/clamshell-impl-default-0.5.2.jar:/opt/CrsCli/cli.jar:/opt/CrsCli/clilib/*:/opt/CrsCli/lib/*:/opt/crs/lib/flowengine/*:/opt/hadoop/share/hadoop/mapreduce1/conf/ cli.Run"
+
+if [ "$user" == "root" ]; then
+  su - hbase -c "java $JAVA_COMMAND";
+elif [ "$user" == "crsadmin" ]; then
+ sudo su - hbase -c "java $JAVA_COMMAND";
+elif [ "$user" == "hbase" ]; then
+ java $JAVA_COMMAND
+fi
