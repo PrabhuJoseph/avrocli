@@ -55,7 +55,7 @@ NOTE :
 
 ## Maven Usage
 
-Use the following definition to use `sqlline` in your maven project:
+Use the following definition to use `avrocli` in your maven project:
 
 ```xml
 <dependency>
